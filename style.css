@@ -1,0 +1,292 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #333 ,#c30000 , #ff3300 , #ffaa44 );
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-style: italic;
+            font-size: 1.1rem;
+            transition: opacity 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .nav-number {
+            font-style: normal;
+            font-size: 10px;
+            opacity: 0.7;
+            margin-right: 0.5rem;
+        }
+
+        /* Letter animation styles */
+        .letter {
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding-top: 80px;
+            position: relative;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Cross/X design with spheres */
+        .cross-design {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+
+        .sphere {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #ffaa44, #ff6644, #cc4422);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .line {
+            position: absolute;
+            background: linear-gradient(45deg, #ff8844, #ffaa44);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Position spheres and lines */
+        .sphere:nth-child(1) {
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .sphere:nth-child(2) {
+            top: 50%;
+            right: -40px;
+            transform: translateY(-50%);
+        }
+
+        .sphere:nth-child(3) {
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .sphere:nth-child(4) {
+            top: 50%;
+            left: -40px;
+            transform: translateY(-50%);
+        }
+
+        .line:nth-child(5) {
+            width: 200px;
+            height: 8px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .line:nth-child(6) {
+            width: 200px;
+            height: 8px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        /* Text positioning */
+        .brand-text {
+            position: absolute;
+            color: white;
+            font-size: 4rem;
+            font-weight: 300;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .brand-text.left {
+            left: -150px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .brand-text.right {
+            right: -200px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Bottom section */
+        .bottom-section {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .lets-talk-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .lets-talk-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .email-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .email-icon:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .email-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: #333;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .logo-container {
+                width: 300px;
+                height: 300px;
+            }
+
+            .cross-design {
+                width: 200px;
+                height: 200px;
+            }
+
+            .sphere {
+                width: 60px;
+                height: 60px;
+            }
+
+            .line:nth-child(5),
+            .line:nth-child(6) {
+                width: 150px;
+                height: 6px;
+            }
+
+            .brand-text {
+                font-size: 2.5rem;
+            }
+
+            .brand-text.left {
+                left: -100px;
+            }
+
+            .brand-text.right {
+                right: -120px;
+            }
+        }
+
+        /* Animation for spheres */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(180deg); }
+        }
+         @keyframes colorChange {
+            0% { background: linear-gradient(145deg, #ff0000, #ff6600); box-shadow: 0 0 20px rgba(255, 102, 0, 0.7); }
+            25% { background: linear-gradient(145deg, #ffff00, #00ff00); box-shadow: 0 0 20px rgba(0, 255, 0, 0.7); }
+            50% { background: linear-gradient(145deg, #00ffff, #0066ff); box-shadow: 0 0 20px rgba(0, 102, 255, 0.7); }
+            75% { background: linear-gradient(145deg, #ff00ff, #6600ff); box-shadow: 0 0 20px rgba(102, 0, 255, 0.7); }
+            100% { background: linear-gradient(145deg, #ff0000, #ff6600); box-shadow: 0 0 20px rgba(255, 102, 0, 0.7); }
+        }
+
+        .sphere {
+            animation: float 4s ease-in-out infinite,
+            colorChange 8s linear infinite;
+        }
+        .sphere:nth-child(1) { animation-delay: 0s; }
+        .sphere:nth-child(2) { animation-delay: 0.5s; }
+        .sphere:nth-child(3) { animation-delay: 1s; }
+        .sphere:nth-child(4) { animation-delay: 1.5s; }
